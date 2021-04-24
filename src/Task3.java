@@ -13,14 +13,25 @@ import java.util.Scanner;
 public class Task3 {
 
     static String ridMultipleBlank(String s) {
-        return s.replaceAll("( )+", " ");
+        return s.replaceAll("( )+", " ").trim();
     }
-    
+    static String removeInteger(String s)
+    {
+        String output = "";
+        for(int i=0;i<s.length();i++)
+        {
+            if(!(s.charAt(i)>='0' && s.charAt(i)<='9'))
+            {
+                output = output + s.charAt(i);
+            }
+        }
+        return output;
+    }
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter String");
         String s = input.nextLine();
-        String output = ridMultipleBlank(s);
+        String output = removeInteger(s);
         System.out.println(output);
     }
 }
