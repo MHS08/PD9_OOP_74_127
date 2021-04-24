@@ -52,10 +52,16 @@ public class Task1 {
         }
 
         return puncCount;
+    };
+    static boolean findSubString(String s, String sub)
+    {
+        boolean flag=false;
+        if(s.contains(sub))
+        {
+            flag=true;
+        }
+        return flag;
     }
-
-    ;
-
     /**
      * @param args the command line arguments
      */
@@ -63,6 +69,8 @@ public class Task1 {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter String");
         String s = input.nextLine();
+        System.out.println("Enter Sub String");
+        String sub = input.nextLine();
         int word = wordCounter(s);
         int vowel = vowelCounter(s);
         int punc = puncCount(s);
@@ -70,7 +78,15 @@ public class Task1 {
         System.out.println("Number of words:" + word);
         System.out.println("Number of vowels:" + vowel);
         System.out.println("Number of punctuations:" + punc);
-        System.out.println("Hello World");
+                if(findSubString(s,sub))
+                {
+                    System.out.println(sub+" is a part of String");
+                }
+                else
+                {
+                    System.out.println(sub+" is not a part of String");
+                }
+        
 
         // TODO code application logic here
     }
