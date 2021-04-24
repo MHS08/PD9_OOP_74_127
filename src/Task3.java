@@ -17,7 +17,7 @@ public class Task3 {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter String");
         String s = input.nextLine();
-        String output = s.trim();
+        String output = s.replaceAll("( )+", " ");
         System.out.println(output);
     }
 }
