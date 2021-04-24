@@ -71,6 +71,7 @@ public class Task1 {
     System.out.println("Number of words:"+word);
     System.out.println("Number of vowels:"+vowel);
     System.out.println("Number of punctuations:"+punc);
+    System.out.println("Hello World");
     
         // TODO code application logic here
     }
