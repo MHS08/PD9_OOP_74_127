@@ -10,15 +10,15 @@ import java.util.Scanner;
  *
  * @author G3NZ
  */
-class data{
+class string{
 
-        public String s;
+        public String data;
         public String displayVertical() {
             String output = "";
-            int size = this.s.length();
+            int size = this.data.length();
             for (int i = 0; i < size; i++) {
-                if (this.s.charAt(i) != ' ') {
-                    output = output + this.s.charAt(i) + "\n";
+                if (this.data.charAt(i) != ' ') {
+                    output = output + this.data.charAt(i) + "\n";
                 }
             }
             return output;
@@ -29,10 +29,10 @@ public class Task2 {
 
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        data d = new data();
+        string s1 = new string();
         System.out.println("Enter a Sentence");
-        d.s = input.nextLine();
-        String output = d.displayVertical();
+        s1.data = input.nextLine();
+        String output = s1.displayVertical();
         System.out.println("Your sentence printed vertically is:");
         System.out.println(output);
     }
