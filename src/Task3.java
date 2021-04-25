@@ -26,12 +26,33 @@ public class Task3 {
             }
         }
         return output;
-    }
+    };
+    static String stringEncryption(String s)
+    {
+      String encrypted=" ";
+      char[] array= s.toCharArray();
+      for(char c: array)
+      {
+          if (c==' ')
+          {
+              c='*';
+              encrypted = encrypted+c;
+          }
+          else
+          {
+              c++;
+              encrypted =encrypted+c;
+          }
+      }
+      return encrypted;
+    };
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter String");
         String s = input.nextLine();
         String output = removeInteger(s);
+        String encryptedResult=stringEncryption(s);
         System.out.println(output);
+        System.out.println(encryptedResult);
     }
 }
