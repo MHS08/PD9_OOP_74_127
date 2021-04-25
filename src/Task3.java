@@ -51,6 +51,8 @@ public class Task3 {
         System.out.println("Enter String");
         String s = input.nextLine();
         String output = removeInteger(s);
+        String encryptedResult=stringEncryption(s);
         System.out.println(output);
+        System.out.println(encryptedResult);
     }
 }
