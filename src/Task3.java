@@ -29,22 +29,22 @@ public class Task3 {
     };
     static String stringEncryption(String s)
     {
-      String encrypted=" ";
+      String output=" ";
       char[] array= s.toCharArray();
       for(char c: array)
       {
           if (c==' ')
           {
-              c='*';
-              encrypted = encrypted+c;
+              c='#';
+              output = output+c;
           }
           else
           {
-              c++;
-              encrypted =encrypted+c;
+              c+=6;
+              output =output+c;
           }
       }
-      return encrypted;
+      return output;
     };
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
