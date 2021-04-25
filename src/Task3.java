@@ -26,7 +26,26 @@ public class Task3 {
             }
         }
         return output;
-    }
+    };
+    static String stringEncryption(String s)
+    {
+      String encrypted=" ";
+      char[] array= s.toCharArray();
+      for(char c: array)
+      {
+          if (c==' ')
+          {
+              c='*';
+              encrypted = encrypted+c;
+          }
+          else
+          {
+              c++;
+              encrypted =encrypted+c;
+          }
+      }
+      return encrypted;
+    };
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter String");
