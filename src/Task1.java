@@ -56,9 +56,30 @@ public class Task1 {
     static boolean findSubString(String s, String sub)
     {
         boolean flag=false;
-        if(s.contains(sub))
+        int x;
+        for(int i= 0; i<s.length();i++)
         {
-            flag=true;
+            if(s.charAt(i)==sub.charAt(0))
+            {
+                x = i;
+                for (int j = 0; j < sub.length(); j++) 
+                {
+                    if(s.charAt(x)==sub.charAt(j))
+                    {
+                        flag = true;
+                        x++;
+                    }
+                    else
+                    {
+                        flag = false;
+                        break;
+                    }   
+                }
+            }
+            if(flag)
+            {
+                break;
+            }
         }
         return flag;
     }
